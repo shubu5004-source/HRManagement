@@ -1,0 +1,92 @@
+/* Page background */
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7e7f84, #110f13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card */
+.register-card {
+  background: #ffffff;
+  padding: 30px 35px;
+  width: 380px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.register-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.error-message {
+  background-color: #ffe5e5;
+  color: #d8000c;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ffb3b3;
+  text-align: center;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #e6ffed;
+  color: #1b7a33;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #b7f5c5;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Inputs & select */
+.register-card input,
+.register-card select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.register-card input:focus,
+.register-card select:focus {
+  border-color: #667eea;
+}
+
+/* Button */
+.register-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.register-card button:hover {
+  background: #5a67d8;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .register-card {
+    width: 90%;
+  }
+}

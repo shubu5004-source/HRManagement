@@ -1,0 +1,85 @@
+/* Background */
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right,#7e7f84, #110f13);
+}
+
+/* Card */
+.profile-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Inputs */
+.profile-card input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.profile-card input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+/* Button */
+.save-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+.save-btn:hover {
+  background: #5563d1;
+}
+
+/* Divider */
+.profile-card hr {
+  margin: 20px 0;
+}
+
+.success-message {
+  background-color: #e6ffed;
+  color: #1b7a33;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #b7f5c5;
+  text-align: center;
+  font-size: 14px;
+}
+
+.error-message {
+  background-color: #ffe5e5;
+  color: #d8000c;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ffb3b3;
+  text-align: center;
+  font-size: 14px;
+}

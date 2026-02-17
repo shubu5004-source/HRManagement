@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+
+.main-content {
+  margin-top: 70px;   /* same as navbar height */
+  padding: 20px;
+}
