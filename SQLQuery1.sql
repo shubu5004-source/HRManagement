@@ -20,3 +20,5 @@ CREATE TABLE Users (
 );
 INSERT INTO Departments (DepartmentName)
 VALUES ('HR'), ('IT'), ('Finance'), ('Sales');
+ALTER TABLE Users
+ADD IsDeleted BIT NOT NULL DEFAULT 0;
