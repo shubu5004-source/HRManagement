@@ -1,0 +1,162 @@
+/* PAGE CONTAINER */
+.users-page {
+  padding: 30px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* TITLE */
+.users-page h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* TABLE WRAPPER */
+.users-table-wrapper {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+/* TABLE */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* TABLE HEADER */
+.users-table thead {
+  background-color: #5a4fcf;
+}
+
+.users-table th {
+  padding: 14px;
+  text-align: left;
+  color: white;
+  font-weight: 600;
+}
+
+/* TABLE BODY */
+.users-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+/* .users-table tr:hover {
+  background-color: #f6f7ff;
+} */
+
+/* ACTION BUTTONS */
+.btn-edit {
+  background: #0739dc;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: #fafafa;
+  color: #333;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* PAGINATION */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: 500;
+  color: #444;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  width: 360px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-box h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.modal-box p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-actions .btn-primary {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #5a4fcf;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-actions .btn-primary:hover {
+  background: #473dbb;
+}

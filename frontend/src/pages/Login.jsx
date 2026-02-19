@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axiosInstance from "../api/axiosInstance";
 import { jwtDecode } from "jwt-decode";
 import "./Login.css";
 
@@ -9,18 +9,18 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");       // ✅ error state
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const login = async () => {
-    setError("");       // clear previous error
+    setError("");
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "https://localhost:7130/api/auth/login",
-        { email, password }
-      );
+      const res = await axiosInstance.post("/auth/login", {
+        email,
+        password
+      });
 
       localStorage.setItem("token", res.data.token);
 
@@ -28,14 +28,9 @@ function Login() {
       const role =
         decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
 
-      if (role === "Admin") {
-        navigate("/admin");
-      } else {
-        navigate("/user");
-      }
-
-    } catch (err) {
-      setError("Invalid email or password");   // ✅ show inside form
+      navigate(role === "Admin" ? "/admin" : "/user");
+    } catch {
+      setError("Invalid email or password");
     } finally {
       setLoading(false);
     }

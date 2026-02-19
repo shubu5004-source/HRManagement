@@ -20,7 +20,7 @@ function Navbar() {
   }
 
   const logout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("token"); // ✅ enough
     navigate("/");
   };
 
@@ -38,6 +38,9 @@ function Navbar() {
               <button onClick={() => navigate("/admin")}>Dashboard</button>
               <button onClick={() => navigate("/admin/users")}>Search</button>
               <button onClick={() => navigate("/admin/all-users")}>All Users</button>
+              <button onClick={() => navigate("/admin/notifications")}>
+                Notifications
+              </button>
             </>
           )}
 

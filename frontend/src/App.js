@@ -106,6 +106,8 @@ import AdminUserSearch from "./pages/AdminUserSearch";
 import UserProfile from "./pages/UserProfile";
 import AdminUserList from "./pages/AdminUserList";
 import AdminEditUserPage from "./pages/AdminEditUserPage";
+import AdminNotifications from "./pages/AdminNotifications";
+
 
 /* 👇 Separate component because useLocation must be inside Router */
 function AppContent() {
@@ -135,6 +137,23 @@ function AppContent() {
             element={
               <ProtectedRoute role="Admin">
                 <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/notifications"
+            element={
+              <ProtectedRoute role="Admin">
+                <AdminNotifications />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/user"
+            element={
+              <ProtectedRoute role="User">
+                <UserDashboard />
               </ProtectedRoute>
             }
           />

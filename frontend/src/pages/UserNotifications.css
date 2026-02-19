@@ -1,0 +1,52 @@
+/* Page container */
+.notifications-page {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Page heading */
+.notifications-page h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Notification card */
+.notification-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.notification-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.notification-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4b3fcf;
+  margin-bottom: 10px;
+}
+
+/* Message */
+.notification-message {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Date */
+.notification-date {
+  font-size: 12px;
+  color: #777;
+  text-align: right;
+}

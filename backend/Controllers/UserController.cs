@@ -88,4 +88,17 @@ public class UserController : ControllerBase
 
         return Ok(new { message = "Password changed successfully" });
     }
+
+    // 🔔 GET NOTIFICATIONS (USER)
+    [HttpGet("notifications")]
+    public IActionResult GetNotifications()
+    {
+        var notifications = _context.Notifications
+            .Where(n => !n.IsDeleted)
+            .OrderByDescending(n => n.CreatedAt)
+            .ToList();
+
+        return Ok(notifications);
+    }
+
 }
