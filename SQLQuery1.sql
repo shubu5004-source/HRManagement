@@ -22,3 +22,10 @@ INSERT INTO Departments (DepartmentName)
 VALUES ('HR'), ('IT'), ('Finance'), ('Sales');
 ALTER TABLE Users
 ADD IsDeleted BIT NOT NULL DEFAULT 0;
+CREATE TABLE Notifications (
+    Id INT PRIMARY KEY IDENTITY,
+    Title NVARCHAR(200) NOT NULL,
+    Message NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+    IsDeleted BIT NOT NULL DEFAULT 0
+);
