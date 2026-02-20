@@ -35,7 +35,7 @@ function Navbar() {
           {role === "Admin" && (
             <>
               <button onClick={() => navigate("/register")}>Register</button>
-              <button onClick={() => navigate("/admin")}>Dashboard</button>
+              {/* <button onClick={() => navigate("/admin")}>Dashboard</button> */}
               <button onClick={() => navigate("/admin/users")}>Search</button>
               <button onClick={() => navigate("/admin/all-users")}>All Users</button>
               <button onClick={() => navigate("/admin/notifications")}>

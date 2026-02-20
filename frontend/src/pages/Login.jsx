@@ -28,7 +28,7 @@ function Login() {
       const role =
         decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
 
-      navigate(role === "Admin" ? "/admin" : "/user");
+      navigate(role === "Admin" ? "/admin/notifications" : "/user");
     } catch {
       setError("Invalid email or password");
     } finally {
